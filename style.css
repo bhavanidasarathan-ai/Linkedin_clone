@@ -54,19 +54,39 @@ body{
 
 .nav-right{
     display:flex;
-    gap:25px;
+    gap:10px;
+    align-items:center;
 }
 
 .nav-right a{
+    display:flex;
+    align-items:center;
+    gap:8px;
     text-decoration:none;
     color:#555;
     font-size:15px;
-    font-weight:bold;
-    transition:.3s;
+    font-weight:600;
+    padding:10px 12px;
+    border-radius:12px;
+    transition:.25s ease;
 }
 
 .nav-right a:hover{
+    background:#eef3f8;
     color:#0A66C2;
+}
+
+.nav-icon,
+.btn-icon{
+    display:inline-flex;
+    width:18px;
+    height:18px;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn-icon{
+    font-size:17px;
 }
 
 /* ================= MAIN LAYOUT ================= */
@@ -75,7 +95,20 @@ body{
     width:90%;
     margin:30px auto;
     display:grid;
-    grid-template-columns:22% 56% 22%;
+    grid-template-columns:24% 52% 24%;
+    gap:25px;
+}
+
+.left-sidebar .create-post{
+    margin-top:25px;
+}
+
+.left-sidebar{
+    position:sticky;
+    top:90px;
+    height:fit-content;
+    display:flex;
+    flex-direction:column;
     gap:25px;
 }
 
@@ -100,6 +133,27 @@ body{
     height:100px;
     border-radius:50%;
     margin-bottom:15px;
+}
+
+.avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto 15px auto;
+    background:#dfe6ee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#0A66C2;
+    font-size:28px;
+}
+
+.avatar.small{
+    width:55px;
+    height:55px;
+    font-size:16px;
+    margin:0;
 }
 
 .profile-card h2{
@@ -172,22 +226,28 @@ body{
 
 .post-actions{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .post-actions button{
+    display:flex;
+    align-items:center;
+    gap:8px;
     border:none;
     background:white;
     cursor:pointer;
     padding:10px 18px;
-    border-radius:6px;
+    border-radius:10px;
     font-size:15px;
-    transition:.3s;
+    transition:.25s ease;
 }
 
 .post-actions button:hover{
     background:#eef3f8;
     color:#0A66C2;
+    transform:translateY(-1px);
 }
 
 /* ================= RIGHT SIDEBAR ================= */
@@ -217,46 +277,252 @@ body{
     margin-bottom:15px;
     color:#555;
     line-height:2;
-    
 }
 
-/* ================= RESPONSIVE ================= */
+.suggestions{
+    background:white;
+    padding:16px 20px 20px 20px;
+    margin-top:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.06);
+}
+
+.suggestions h2{
+    margin-bottom:12px;
+}
+
+.suggestion{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:8px 0;
+    border-bottom:1px solid #f0f2f5;
+}
+
+.suggestion:last-of-type{
+    border-bottom:none;
+}
+
+.suggestion img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.suggestion-info h3{
+    margin:0;
+    font-size:15px;
+}
+
+.suggestion-info p{
+    margin:2px 0 0 0;
+    font-size:13px;
+    color:#666;
+}
+
+.connect{
+    margin-left:auto;
+    background:#0A66C2;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:18px;
+    cursor:pointer;
+    font-weight:600;
+    transition:transform .15s ease, opacity .15s ease;
+}
+
+.connect:hover{
+    transform:translateY(-2px);
+    opacity:0.95;
+}
+
+.create-post{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.post-top{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.post-top img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.post-top input{
+    width:100%;
+    padding:12px 18px;
+    border:1px solid #d3d6db;
+    border-radius:30px;
+    outline:none;
+    background:#eef3f8;
+    font-size:15px;
+}
+
+.post-user{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    color:#555;
+}
+
+.create-post textarea{
+    width:100%;
+    min-height:120px;
+    padding:18px;
+    border:1px solid #d3d6db;
+    border-radius:15px;
+    resize:vertical;
+    font-size:15px;
+    background:#f9fafb;
+}
+
+.create-post .post-header{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.create-post .post-header button,
+.post-actions button{
+    border:none;
+    background:white;
+    cursor:pointer;
+    padding:10px 18px;
+    border-radius:6px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.create-post .post-header button:hover,
+.post-actions button:hover{
+    background:#eef3f8;
+    color:#0A66C2;
+}
 
 @media(max-width:1000px){
+    .container{
+        grid-template-columns:1fr;
+    }
 
-.container{
+    .left-sidebar{
+        display:none;
+    }
 
-grid-template-columns:1fr;
+    .right-sidebar{
+        display:none;
+    }
 
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .nav-right{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-left input,
+    .create-post textarea,
+    .post-top input{
+        width:100%;
+    }
+
+    .post-actions{
+        flex-wrap:wrap;
+        justify-content:space-between;
+        gap:10px;
+    }
+
+    .post-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
 
-.left-sidebar{
-
-display:none;
-
+.profile-page{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:28% 72%;
+    gap:25px;
 }
 
-.right-sidebar{
-
-display:none;
-
+.profile-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
 }
 
-.navbar{
-
-flex-direction:column;
-
-gap:15px;
-
-padding:20px;
-
+.profile-content{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
 }
 
-.nav-right{
+.profile-section{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
 
-flex-wrap:wrap;
+.profile-section h2{
+    margin-bottom:15px;
+}
 
-justify-content:center;
+.section-item h3{
+    margin-bottom:8px;
+}
+
+.section-item p,
+.profile-section p,
+.profile-section ul{
+    color:#555;
+    line-height:1.8;
+}
+
+.profile-section ul{
+    padding-left:20px;
+}
+
+.skills-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill-pill{
+    background:#eef3f8;
+    color:#0a66c2;
+    padding:8px 14px;
+    border-radius:999px;
+    font-weight:600;
+}
+
+@media(max-width:1000px){
+    .profile-page{
+        grid-template-columns:1fr;
+    }
+
+    .profile-sidebar{
+        position:static;
+    }
+}
 
 }
 

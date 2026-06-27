@@ -4,175 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Clone</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-
     <nav class="navbar">
-
         <div class="nav-left">
-
             <img src="images/logo.svg" class="logo" alt="LinkedIn Logo">
-
-            <input type="text" placeholder="Search">
-
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search">
+            </div>
         </div>
-
         <div class="nav-right">
-
-            <a href="index.html">Home</a>
-            <a href="#">My Network</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="#">Messaging</a>
-            <a href="#">Notifications</a>
-            <a href="profile.html">Me</a>
-
+            <a href="index.html"><span class="nav-icon">🏠</span>Home</a>
+            <a href="#"><span class="nav-icon">👥</span>My Network</a>
+            <a href="#"><span class="nav-icon">💼</span>Jobs</a>
+            <a href="#"><span class="nav-icon">💬</span>Messaging</a>
+            <a href="#"><span class="nav-icon">🔔</span>Notifications</a>
+            <a href="profile.html"><span class="nav-icon">👤</span>Me</a>
         </div>
-
     </nav>
-
-    <!-- Main Container -->
-
     <div class="container">
-
-        <!-- Left Sidebar -->
-
         <div class="left-sidebar">
-
             <div class="profile-card">
-
-                <img src="images/profile pic .jpeg" alt="Shruti">
-
+                <div class="avatar">S</div>
                 <h2>Shruti</h2>
-
                 <p>Frontend Developer</p>
-
                 <hr>
-
-                <p><strong>Connections:</strong>245</p>
-
-                <p><strong>Profile Views:</strong>120</p>
-
+                <p><strong>Connections:</strong>150+</p>
+                <p><strong>Profile Views:</strong>90+</p>
             </div>
-
+            <div class="create-post">
+                <div class="post-top">
+                    <div class="avatar small">S</div>
+                    <input type="text" placeholder="Start a post">
+                </div>
+                <div class="post-header">
+                    <button type="button"><span class="btn-icon"></span>Photo</button>
+                    <button type="button"><span class="btn-icon"></span>Video</button>
+                    <button type="button"><span class="btn-icon"></span>Event</button>
+                    <button type="button"><span class="btn-icon"></span>Write Article</button>
+                </div>
+                <div class="post-user">
+                    <h3>Shruti</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                <textarea placeholder="What do you want to talk about?"></textarea>
+                <div class="post-actions">
+                    <button type="button">📷 Photo</button>
+                    <button type="button">📍 Location</button>
+                    <button type="button">🗓️ Event</button>
+                    <button type="button">📤 Share</button>
+                </div>
+            </div>
         </div>
-
-        <!-- Feed Section -->
-
         <div class="feed">
-
-            <!-- First Post -->
-
             <div class="post">
-
                 <div class="post-header">
-
                     <img src="images/profile pic 2.png" alt="Milan">
-
                     <div>
-
-                        <h3>Milan</h3>
-
+                        <h3>Priya</h3>
                         <p>Software Engineer • 2h • 🌍</p>
-
                     </div>
-
                 </div>
-
-                <p>
-
-                    Excited to complete my LinkedIn Clone using HTML and CSS.
+                <p>Excited to complete my LinkedIn Clone using HTML and CSS.
                     Looking forward to improving my frontend development skills!
-
                 </p>
-
-                <img src="images/certificate 1.png" alt="Certificate">
-
+                <img src="images/priya_certificate.png" alt="Priya's Certificate">
                 <div class="post-actions">
-
                     <button>👍 Like</button>
-
                     <button>💬 Comment</button>
-
                     <button>🔄 Repost</button>
-
                     <button>📤 Send</button>
-
                 </div>
-
             </div>
-
-            <!-- Second Post -->
-
             <div class="post">
-
                 <div class="post-header">
-
-                    <img src="images/profile pic 2.jpeg" alt="Shruti">
-
+                    <img src="images/profile pic 2.png" alt="Shruti">
                     <div>
-
                         <h3>Bhavani</h3>
-
                         <p>UI / UX Designer • 5h</p>
-
                     </div>
-
                 </div>
-
-                <p>
-
-                    Practice every day. Small progress leads to big success.
-
-                </p>
-
+                <p>Practice every day. Small progress leads to big success.</p>
                 <img src="images/certificate 2.png" alt="Achievement">
-
                 <div class="post-actions">
-
-                    <button>👍 Like</button>
-
-                    <button>💬 Comment</button>
-
-                    <button>🔄 Repost</button>
-
-                    <button>📤 Send</button>
-
+                    <button type="button"><span class="btn-icon">👍</span>Like</button>
+                    <button type="button"><span class="btn-icon">💬</span>Comment</button>
+                    <button type="button"><span class="btn-icon">🔄</span>Repost</button>
+                    <button type="button"><span class="btn-icon">📤</span>Send</button>
                 </div>
-
             </div>
-
         </div>
-
-        <!-- Right Sidebar -->
-
         <div class="right-sidebar">
-
             <div class="news">
-
                 <h2>LinkedIn News</h2>
-
                 <ul>
-
                     <li>AI is transforming software development.</li>
-
                     <li>Frontend Developers are in high demand.</li>
-
                     <li>Top companies hiring freshers this month.</li>
-
                     <li>Learn HTML, CSS and JavaScript.</li>
-
                 </ul>
-
+                <a href="#">Show more</a>
             </div>
-
+            <div class="suggestions">
+                <h2>People you may know</h2>
+                <div class="suggestion">
+                    <img src="images/profile pic 2.png" alt="Milan">
+                    <div class="suggestion-info">
+                        <h3>Milan</h3>
+                        <p>Software Engineer</p>
+                    </div>
+                    <button class="connect" type="button">Connect</button>
+                </div>
+                <div class="suggestion">
+                    <img src="images/profile pic.jpeg" alt="Shruti">
+                    <div class="suggestion-info">
+                        <h3>Shruti</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <button class="connect" type="button">Connect</button>
+                </div>
+                <a href="#">See all</a>
+            </div>
         </div>
-
     </div>
-
 </body>
 </html>
