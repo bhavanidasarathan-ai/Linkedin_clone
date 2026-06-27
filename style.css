@@ -41,13 +41,12 @@ body{
 
 }
 
-.nav-left input{
+.search-input{
     width:300px;
     padding:10px 15px;
     border:none;
     outline:none;
     border-radius:25px;
-    padding-left:20px;
     background:#eef3f8;
     font-size:15px;
 }
@@ -524,7 +523,7 @@ body{
     }
 }
 
-}
+
 
 .nav-left{
 
@@ -538,7 +537,7 @@ width:100%;
 
 }
 
-}
+
 .logo{
 
 height:40px;
