@@ -4,8 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedClone Network</title>
-    <link rel="stylesheet" href="network.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f3f2ef;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            background:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:bold;
+            color:#0a66c2;
+        }
+
+        .navbar input{
+            width:250px;
+            padding:8px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .nav-links a{
+            margin-left:20px;
+            text-decoration:none;
+            color:#444;
+            font-weight:500;
+        }
+
+        /* MAIN */
+        .container{
+            width:90%;
+            margin:30px auto;
+            display:flex;
+            gap:20px;
+        }
+
+        /* SIDEBAR */
+        .sidebar{
+            width:25%;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            height:fit-content;
+        }
+
+        .sidebar h3{
+            margin-bottom:20px;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar li{
+            padding:12px 0;
+            border-bottom:1px solid #eee;
+        }
+
+        /* MAIN CONTENT */
+        .main-content{
+            width:75%;
+        }
+
+        .box{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:20px;
+        }
+
+        /* INVITES */
+        .invite-card{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin-top:20px;
+        }
+
+        .invite-card img{
+            border-radius:50%;
+        }
+
+        .info{
+            flex:1;
+        }
+
+        .accept{
+            background:#0a66c2;
+            color:white;
+            border:none;
+            padding:8px 15px;
+            border-radius:20px;
+            cursor:pointer;
+        }
+
+        .ignore{
+            background:white;
+            border:1px solid #999;
+            padding:8px 15px;
+            border-radius:20px;
+            cursor:pointer;
+            margin-left:10px;
+        }
+
+        /* PROFILE CARDS */
+        .cards{
+            display:flex;
+            gap:20px;
+            margin-top:20px;
+        }
+
+        .profile-card{
+            width:200px;
+            background:#fafafa;
+            border:1px solid #ddd;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .profile-card img{
+            border-radius:50%;
+            margin-bottom:10px;
+        }
+
+        .profile-card p{
+            color:gray;
+            font-size:14px;
+            margin:10px 0;
+        }
+
+        .profile-card button{
+            width:100%;
+            padding:10px;
+            background:#0a66c2;
+            border:none;
+            color:white;
+            border-radius:20px;
+            cursor:pointer;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -15,14 +171,14 @@
         <input type="text" placeholder="Search">
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="network.html">My Network</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="message.html">Messaging</a>
+            <a href="#">Home</a>
+            <a href="#">My Network</a>
+            <a href="#">Jobs</a>
+            <a href="#">Messaging</a>
         </div>
     </nav>
 
-    <!-- Main Layout -->
+    <!-- Main -->
     <div class="container">
 
         <!-- Sidebar -->
@@ -40,34 +196,30 @@
         <!-- Main Content -->
         <main class="main-content">
 
-            <!-- Invitations -->
             <section class="box">
                 <h2>Invitations</h2>
 
                 <div class="invite-card">
-                    <img src="https://via.placeholder.com/60" alt="profile">
+                    <img src="https://via.placeholder.com/60" alt="">
                     <div class="info">
                         <h4>John David</h4>
                         <p>Frontend Developer</p>
                     </div>
-
                     <button class="accept">Accept</button>
                     <button class="ignore">Ignore</button>
                 </div>
 
                 <div class="invite-card">
-                    <img src="https://via.placeholder.com/60" alt="profile">
+                    <img src="https://via.placeholder.com/60" alt="">
                     <div class="info">
                         <h4>Sarah Lee</h4>
                         <p>UI/UX Designer</p>
                     </div>
-
                     <button class="accept">Accept</button>
                     <button class="ignore">Ignore</button>
                 </div>
             </section>
 
-            <!-- Suggestions -->
             <section class="box">
                 <h2>People You May Know</h2>
 
@@ -98,7 +250,6 @@
             </section>
 
         </main>
-
     </div>
 
 </body>
