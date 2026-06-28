@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Clone - Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f3f2ef;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* container */
+.box{
+    width:380px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+/* logo */
+.logo{
+    text-align:center;
+    color:#0A66C2;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.logo span{
+    background:#0A66C2;
+    color:white;
+    padding:2px 6px;
+    border-radius:4px;
+}
+
+/* tabs */
+.tabs{
+    display:flex;
+    margin-bottom:20px;
+}
+
+.tabs button{
+    flex:1;
+    padding:10px;
+    border:none;
+    cursor:pointer;
+    background:#eee;
+    font-weight:bold;
+}
+
+.tabs button.active{
+    background:#0A66C2;
+    color:white;
+}
+
+/* forms */
+form{
+    display:none;
+}
+
+form.active{
+    display:block;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+
+input:focus{
+    outline:none;
+    border:2px solid #0A66C2;
+}
+
+button.submit{
+    width:100%;
+    padding:12px;
+    background:#0A66C2;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button.submit:hover{
+    background:#004182;
+}
+
+.link{
+    text-align:center;
+    margin-top:15px;
+    color:#666;
+}
+
+.link a{
+    color:#0A66C2;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+    <div class="logo">Linked<span>In</span></div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="active" onclick="showLogin()">Login</button>
+        <button onclick="showSignup()">Signup</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="active">
+        <input type="email" placeholder="Email or Phone" required>
+        <input type="password" placeholder="Password" required>
+        <button class="submit">Sign In</button>
+
+        <div class="link">
+            New here? Click Signup tab
+        </div>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password (6+ chars)" required>
+        <button class="submit">Join Now</button>
+
+        <div class="link">
+            Already have account? Click Login tab
+        </div>
+    </form>
+
+</div>
+
+<script>
+function showLogin(){
+    document.getElementById("loginForm").classList.add("active");
+    document.getElementById("signupForm").classList.remove("active");
+
+    document.querySelectorAll(".tabs button")[0].classList.add("active");
+    document.querySelectorAll(".tabs button")[1].classList.remove("active");
+}
+
+function showSignup(){
+    document.getElementById("signupForm").classList.add("active");
+    document.getElementById("loginForm").classList.remove("active");
+
+    document.querySelectorAll(".tabs button")[1].classList.add("active");
+    document.querySelectorAll(".tabs button")[0].classList.remove("active");
+}
+</script>
+
+</body>
+</html>
