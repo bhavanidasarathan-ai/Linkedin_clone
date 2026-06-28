@@ -129,10 +129,10 @@ button.submit:hover{
     </div>
 
     <!-- LOGIN FORM -->
-    <form id="loginForm" class="active">
+    <form id="loginForm" class="active" onsubmit="goToIndex(event)">
         <input type="email" placeholder="Email or Phone" required>
         <input type="password" placeholder="Password" required>
-        <button class="submit">Sign In</button>
+        <button class="submit" type="submit">Sign In</button>
 
         <div class="link">
             New here? Click Signup tab
@@ -169,6 +169,12 @@ function showSignup(){
 
     document.querySelectorAll(".tabs button")[1].classList.add("active");
     document.querySelectorAll(".tabs button")[0].classList.remove("active");
+}
+
+// redirect to index page after login
+function goToIndex(event){
+    event.preventDefault(); // stop page reload
+    window.location.href = "index.html";
 }
 </script>
 
