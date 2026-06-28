@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - LinkedClone</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f3f2ef;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            background:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:bold;
+            color:#0a66c2;
+        }
+
+        .nav-links a{
+            margin-left:20px;
+            text-decoration:none;
+            color:#444;
+        }
+
+        /* MAIN LAYOUT */
+        .container{
+            width:90%;
+            margin:30px auto;
+            display:flex;
+            gap:20px;
+        }
+
+        /* CHAT LIST */
+        .chat-list{
+            width:30%;
+            background:white;
+            border-radius:10px;
+            padding:20px;
+        }
+
+        .chat-list h3{
+            margin-bottom:20px;
+        }
+
+        .chat-user{
+            padding:15px;
+            border-bottom:1px solid #eee;
+            cursor:pointer;
+        }
+
+        .chat-user:hover{
+            background:#f7f7f7;
+        }
+
+        .chat-user h4{
+            margin-bottom:5px;
+        }
+
+        .chat-user p{
+            color:gray;
+            font-size:14px;
+        }
+
+        /* CHAT WINDOW */
+        .chat-window{
+            width:70%;
+            background:white;
+            border-radius:10px;
+            display:flex;
+            flex-direction:column;
+            padding:20px;
+            min-height:500px;
+        }
+
+        .chat-header{
+            border-bottom:1px solid #eee;
+            padding-bottom:15px;
+            margin-bottom:20px;
+        }
+
+        .messages{
+            flex:1;
+        }
+
+        .message{
+            padding:12px;
+            margin-bottom:15px;
+            max-width:60%;
+            border-radius:10px;
+        }
+
+        .received{
+            background:#eeeeee;
+        }
+
+        .sent{
+            background:#0a66c2;
+            color:white;
+            margin-left:auto;
+        }
+
+        /* INPUT */
+        .message-box{
+            margin-top:20px;
+            display:flex;
+            gap:10px;
+        }
+
+        .message-box input{
+            flex:1;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:20px;
+        }
+
+        .message-box button{
+            padding:12px 20px;
+            border:none;
+            background:#0a66c2;
+            color:white;
+            border-radius:20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">LinkedClone</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="network.html">My Network</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="message.html">Messaging</a>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- LEFT CHAT LIST -->
+        <div class="chat-list">
+            <h3>Messages</h3>
+
+            <div class="chat-user">
+                <h4>John David</h4>
+                <p>Hey, are you available?</p>
+            </div>
+
+            <div class="chat-user">
+                <h4>Sarah Lee</h4>
+                <p>Can we connect?</p>
+            </div>
+
+            <div class="chat-user">
+                <h4>Emma Wilson</h4>
+                <p>Thanks for accepting.</p>
+            </div>
+        </div>
+
+        <!-- RIGHT CHAT WINDOW -->
+        <div class="chat-window">
+
+            <div class="chat-header">
+                <h3>John David</h3>
+            </div>
+
+            <div class="messages">
+
+                <div class="message received">
+                    Hi, I saw your profile.
+                </div>
+
+                <div class="message sent">
+                    Thanks, nice connecting with you.
+                </div>
+
+                <div class="message received">
+                    Are you working on any projects?
+                </div>
+
+            </div>
+
+            <div class="message-box">
+                <input type="text" placeholder="Write a message...">
+                <button>Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
