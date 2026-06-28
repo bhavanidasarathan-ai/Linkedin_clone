@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Page</title>
+    <title>LinkedClone Network</title>
+    <link rel="stylesheet" href="network.css">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">LinkedClone</div>
+
         <input type="text" placeholder="Search">
+
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="network.html">My Network</a>
@@ -19,12 +22,12 @@
         </div>
     </nav>
 
-    <!-- Main Container -->
+    <!-- Main Layout -->
     <div class="container">
 
-        <!-- Left Sidebar -->
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <h3>Manage my network</h3>
+            <h3>Manage My Network</h3>
             <ul>
                 <li>Connections</li>
                 <li>Contacts</li>
@@ -38,33 +41,35 @@
         <main class="main-content">
 
             <!-- Invitations -->
-            <section class="invitations">
+            <section class="box">
                 <h2>Invitations</h2>
 
                 <div class="invite-card">
-                    <img src="https://via.placeholder.com/60" alt="">
+                    <img src="https://via.placeholder.com/60" alt="profile">
                     <div class="info">
                         <h4>John David</h4>
                         <p>Frontend Developer</p>
                     </div>
+
                     <button class="accept">Accept</button>
                     <button class="ignore">Ignore</button>
                 </div>
 
                 <div class="invite-card">
-                    <img src="https://via.placeholder.com/60" alt="">
+                    <img src="https://via.placeholder.com/60" alt="profile">
                     <div class="info">
                         <h4>Sarah Lee</h4>
                         <p>UI/UX Designer</p>
                     </div>
+
                     <button class="accept">Accept</button>
                     <button class="ignore">Ignore</button>
                 </div>
             </section>
 
             <!-- Suggestions -->
-            <section class="suggestions">
-                <h2>People you may know</h2>
+            <section class="box">
+                <h2>People You May Know</h2>
 
                 <div class="cards">
 
@@ -93,6 +98,7 @@
             </section>
 
         </main>
+
     </div>
 
 </body>
