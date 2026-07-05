@@ -71,7 +71,7 @@ location
 localStorage.setItem("users",JSON.stringify(users));
 
 alert("Registration Successful");
-
+    
 window.location.href="login.html";
 
 });
