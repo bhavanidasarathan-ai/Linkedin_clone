@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LinkedIn Clone - Login</title>
+<title>LinkedIn Clone</title>
 
 <style>
 *{
@@ -22,23 +22,24 @@ body{
 }
 
 .box{
-    width:380px;
-    background:white;
+    width:400px;
+    background:#fff;
     padding:30px;
     border-radius:10px;
-    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    box-shadow:0 0 15px rgba(0,0,0,.15);
 }
 
 .logo{
     text-align:center;
     color:#0A66C2;
-    font-size:28px;
+    font-size:32px;
+    font-weight:bold;
     margin-bottom:20px;
 }
 
 .logo span{
     background:#0A66C2;
-    color:white;
+    color:#fff;
     padding:2px 6px;
     border-radius:4px;
 }
@@ -75,7 +76,7 @@ input{
     width:100%;
     padding:12px;
     margin-bottom:15px;
-    border:1px solid #aaa;
+    border:1px solid #bbb;
     border-radius:5px;
     font-size:15px;
 }
@@ -103,8 +104,7 @@ input:focus{
 .link{
     text-align:center;
     margin-top:15px;
-    color:#666;
-    font-size:15px;
+    color:#555;
 }
 </style>
 
@@ -113,98 +113,103 @@ input:focus{
 
 <div class="box">
 
-    <div class="logo">
-        Linked<span>In</span>
-    </div>
+<div class="logo">
+Linked<span>In</span>
+</div>
 
-    <div class="tabs">
-        <button id="loginTab" class="active" onclick="showLogin()">Login</button>
-        <button id="signupTab" onclick="showSignup()">Signup</button>
-    </div>
+<div class="tabs">
+<button id="loginTab" class="active" onclick="showLogin()">Login</button>
+<button id="signupTab" onclick="showSignup()">Signup</button>
+</div>
 
-    <!-- LOGIN FORM -->
-    <form id="loginForm" class="active" onsubmit="goToIndex(event)">
+<!-- LOGIN -->
 
-        <input
-            id="loginEmail"
-            type="email"
-            placeholder="Email or Phone"
-            required>
+<form id="loginForm" class="active">
 
-        <input
-            id="loginPassword"
-            type="password"
-            placeholder="Password"
-            required>
+<input
+id="loginEmail"
+type="email"
+placeholder="Email"
+required>
 
-        <button type="submit" class="submit">
-            Sign In
-        </button>
+<input
+id="loginPassword"
+type="password"
+placeholder="Password"
+required>
 
-        <div class="link">
-            New here? Click Signup tab
-        </div>
+<button class="submit" type="submit">
+Sign In
+</button>
 
-    </form>
+<div class="link">
+New here? Click Signup tab
+</div>
 
-    <!-- SIGNUP FORM -->
-    <form id="signupForm">
+</form>
 
-        <input
-            type="text"
-            placeholder="First Name"
-            required>
+<!-- SIGNUP -->
 
-        <input
-            type="text"
-            placeholder="Last Name"
-            required>
+<form id="signupForm">
 
-        <input
-            type="email"
-            placeholder="Email"
-            required>
+<input
+id="firstName"
+type="text"
+placeholder="First Name"
+required>
 
-        <input
-            type="password"
-            placeholder="Password (6+ chars)"
-            required>
+<input
+id="lastName"
+type="text"
+placeholder="Last Name"
+required>
 
-        <button type="submit" class="submit">
-            Join Now
-        </button>
+<input
+id="email"
+type="email"
+placeholder="Email"
+required>
 
-        <div class="link">
-            Already have an account? Click Login tab
-        </div>
+<input
+id="password"
+type="password"
+placeholder="Password"
+required>
 
-    </form>
+<button class="submit" type="submit">
+Join Now
+</button>
+
+<div class="link">
+Already have an account? Click Login tab
+</div>
+
+</form>
 
 </div>
 
 <script>
-function showLogin() {
-    document.getElementById("loginForm").classList.add("active");
-    document.getElementById("signupForm").classList.remove("active");
 
-    document.getElementById("loginTab").classList.add("active");
-    document.getElementById("signupTab").classList.remove("active");
+function showLogin(){
+
+document.getElementById("loginForm").classList.add("active");
+document.getElementById("signupForm").classList.remove("active");
+
+document.getElementById("loginTab").classList.add("active");
+document.getElementById("signupTab").classList.remove("active");
+
 }
 
-function showSignup() {
-    document.getElementById("signupForm").classList.add("active");
-    document.getElementById("loginForm").classList.remove("active");
+function showSignup(){
 
-    document.getElementById("signupTab").classList.add("active");
-    document.getElementById("loginTab").classList.remove("active");
+document.getElementById("signupForm").classList.add("active");
+document.getElementById("loginForm").classList.remove("active");
+
+document.getElementById("signupTab").classList.add("active");
+document.getElementById("loginTab").classList.remove("active");
+
 }
 
-function goToIndex(event) {
-    event.preventDefault();
-
-    // Redirect after successful login
-    window.location.href = "index.html";
-}
 </script>
 
 <script src="login.js"></script>
