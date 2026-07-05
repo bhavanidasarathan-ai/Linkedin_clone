@@ -122,16 +122,14 @@ button.submit:hover{
 
     <div class="logo">Linked<span>In</span></div>
 
-    <!-- Tabs -->
     <div class="tabs">
         <button class="active" onclick="showLogin()">Login</button>
         <button onclick="showSignup()">Signup</button>
     </div>
 
-    <!-- LOGIN FORM -->
-    <form id="loginForm" class="active" onsubmit="goToIndex(event)">
-        <input type="email" placeholder="Email or Phone" required>
-        <input type="password" placeholder="Password" required>
+    <form id="loginForm" class="active">
+        <input id="loginEmail" type="email" placeholder="Email or Phone" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
         <button class="submit" type="submit">Sign In</button>
 
         <div class="link">
@@ -171,12 +169,8 @@ function showSignup(){
     document.querySelectorAll(".tabs button")[0].classList.remove("active");
 }
 
-// redirect to index page after login
-function goToIndex(event){
-    event.preventDefault(); // stop page reload
-    window.location.href = "index.html";
-}
 </script>
+<script src="login.js"></script>
 
 </body>
 </html>
