@@ -21,7 +21,7 @@ body{
     height:100vh;
 }
 
-/* container */
+
 .box{
     width:380px;
     background:white;
@@ -30,7 +30,7 @@ body{
     box-shadow:0 0 20px rgba(0,0,0,0.1);
 }
 
-/* logo */
+
 .logo{
     text-align:center;
     color:#0A66C2;
@@ -45,7 +45,7 @@ body{
     border-radius:4px;
 }
 
-/* tabs */
+
 .tabs{
     display:flex;
     margin-bottom:20px;
@@ -65,7 +65,7 @@ body{
     color:white;
 }
 
-/* forms */
+
 form{
     display:none;
 }
@@ -122,13 +122,13 @@ button.submit:hover{
 
     <div class="logo">Linked<span>In</span></div>
 
-    <!-- Tabs -->
+    
     <div class="tabs">
         <button class="active" onclick="showLogin()">Login</button>
         <button onclick="showSignup()">Signup</button>
     </div>
 
-    <!-- LOGIN FORM -->
+    
     <form id="loginForm" class="active" onsubmit="goToIndex(event)">
         <input type="email" placeholder="Email or Phone" required>
         <input type="password" placeholder="Password" required>
@@ -171,9 +171,9 @@ function showSignup(){
     document.querySelectorAll(".tabs button")[0].classList.remove("active");
 }
 
-// redirect to index page after login
+
 function goToIndex(event){
-    event.preventDefault(); // stop page reload
+    event.preventDefault(); 
     window.location.href = "index.html";
 }
 </script>
