@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LinkedIn Registration</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,20 +12,39 @@
 
     <div class="register-card">
 
-        <img src="images/logo.svg" class="logo">
+        <img src="images/logo.svg" alt="LinkedIn Logo" class="logo">
 
         <h2>Join LinkedIn</h2>
+
         <form id="registerForm">
 
             <div class="name-group">
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
+                <input
+                    id="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    required>
+
+                <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                    required>
             </div>
 
-            <input type="email" placeholder="Email Address" required>
+            <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                required>
 
             <div class="password-box">
-                <input type="password" id="password" placeholder="Password" required>
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    required>
+
                 <button type="button" onclick="togglePassword()">👁</button>
             </div>
 
@@ -33,17 +52,31 @@
                 <div class="strength-fill"></div>
             </div>
 
-            <input type="password" placeholder="Confirm Password" required>
+            <input
+                id="confirmPassword"
+                type="password"
+                placeholder="Confirm Password"
+                required>
 
-            <input type="text" placeholder="Location">
+            <input
+                id="location"
+                type="text"
+                placeholder="Location">
 
             <label class="upload">
                 Upload Profile Picture
-                <input type="file">
+                <input
+                    id="profilePicture"
+                    type="file"
+                    accept="image/*">
             </label>
 
             <label class="terms">
-                <input type="checkbox" required>
+                <input
+                    id="terms"
+                    type="checkbox"
+                    required>
+
                 I agree to the Terms & Conditions
             </label>
 
@@ -64,22 +97,31 @@
 
 <script>
 function togglePassword() {
-    let x = document.getElementById("password");
-    x.type = x.type === "password" ? "text" : "password";
+    const password = document.getElementById("password");
+
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
 }
 
-document.getElementById("password").addEventListener("input", function() {
-    let strength = document.querySelector(".strength-fill");
+document.getElementById("password").addEventListener("input", function () {
 
-    if(this.value.length < 4)
+    const strength = document.querySelector(".strength-fill");
+
+    if (this.value.length < 4) {
         strength.style.width = "30%";
-    else if(this.value.length < 8)
+    } else if (this.value.length < 8) {
         strength.style.width = "60%";
-    else
+    } else {
         strength.style.width = "100%";
+    }
+
 });
 </script>
-    <script src="register.js"></script>
+
+<script src="register.js"></script>
 
 </body>
 </html>
