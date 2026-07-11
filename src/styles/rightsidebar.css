@@ -1,0 +1,71 @@
+.right-sidebar{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+    height:fit-content;
+}
+
+.right-sidebar h3{
+    margin-top:0;
+}
+
+.right-sidebar p{
+    color:#555;
+    margin:12px 0;
+}
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-card,
+.people-card,
+.trending-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.news-card li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.person {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.person-image {
+    width: 45px;
+    height: 45px;
+    background: #0a66c2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.person p {
+    margin: 3px 0;
+    color: gray;
+}
+
+.person button {
+    border: 1px solid #0a66c2;
+    color: #0a66c2;
+    background: white;
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.trending-card p {
+    color: #0a66c2;
+    cursor: pointer;
+}

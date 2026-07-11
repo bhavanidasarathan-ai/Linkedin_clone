@@ -1,0 +1,40 @@
+.messages-page {
+    padding: 30px;
+}
+
+.chat-container {
+    display: flex;
+    gap: 20px;
+}
+
+.chat-list {
+    width: 300px;
+}
+
+.chat-card {
+    background: white;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.chat-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #0a66c2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-window {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}

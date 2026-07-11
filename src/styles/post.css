@@ -1,0 +1,149 @@
+.post {
+  background: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #0a66c2;
+}
+
+.post-header h4 {
+  margin: 0;
+}
+
+.post-header p {
+  margin: 0;
+  color: gray;
+  font-size: 13px;
+}
+
+.post-content {
+  margin: 18px 0;
+  line-height: 1.6;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.post-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.post-actions button:hover {
+  color: #0a66c2;
+}
+.post-image{
+    width:100%;
+    border-radius:10px;
+    margin-top:15px;
+    border:1px solid #ddd;
+}
+.post {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #0a66c2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.post-header h3 {
+    margin: 0;
+}
+
+.post-header p {
+    margin: 2px 0;
+    color: gray;
+    font-size: 13px;
+}
+
+.post-content {
+    margin: 15px 0;
+}
+
+.certificate {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.post-actions button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+.comment-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.comment-section input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.comment-section button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comments p {
+    background: #f3f3f3;
+    padding: 8px;
+    border-radius: 8px;
+}

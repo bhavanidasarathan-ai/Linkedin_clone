@@ -1,0 +1,40 @@
+.network-page {
+    padding: 30px;
+}
+
+.people-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.network-card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.network-image {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background: #0a66c2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.network-card button {
+    border: 1px solid #0a66c2;
+    background: white;
+    color: #0a66c2;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
