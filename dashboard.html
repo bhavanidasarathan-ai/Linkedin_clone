@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <h2>LinkedIn Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</nav>
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">B</div>
+            <h2 id="username">Bhavani</h2>
+            <p>Frontend Developer</p>
+            <div class="progress-section">
+                <h4>Profile Strength</h4>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <p>80% Complete</p>
+            </div>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">🏠 Home</a>
+            <a href="network.html">👥 Network</a>
+            <a href="jobs.html">💼 Jobs</a>
+            <a href="message.html">💬 Messages</a>
+            <a href="profile.html">👤 Profile</a>
+        </div>
+    </div>
+    <div class="main-content">
+
+        <div class="welcome-card">
+            <h1>Welcome Back Shruti👋</h1>
+            <p>Let's grow your professional network today.</p>
+        </div>
+        <div class="stats">
+            <div class="stat-card">
+                <h2>245</h2>
+                <p>Connections</p>
+            </div>
+            <div class="stat-card">
+                <h2>120</h2>
+                <p>Profile Views</p>
+            </div>
+            <div class="stat-card">
+                <h2>18</h2>
+                <p>Messages</p>
+            </div>
+            <div class="stat-card">
+                <h2>12</h2>
+                <p>Applications</p>
+            </div>
+        </div>
+        <div class="activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-item">
+                ✅ Applied for Frontend Developer
+            </div>
+            <div class="activity-item">
+                ✅ Connected with Shruti
+            </div>
+            <div class="activity-item">
+                ✅ Updated Profile Information
+            </div>
+            <div class="activity-item">
+                ✅ Received 12 Profile Views
+            </div>
+        </div>
+
+    </div>
+    <div class="right-sidebar">
+
+        <div class="suggestions">
+            <h3>People You May Know</h3>
+
+            <div class="person">
+                <p><b>Shruti</b><br>Frontend Developer</p>
+                <button>Follow</button>
+            </div>
+
+            <div class="person">
+                <p><b>Priyavalli</b><br>UI Designer</p>
+                <button>Follow</button>
+            </div>
+        </div>
+        <div class="jobs">
+            <h3>Recommended Jobs</h3>
+            <p> Frontend Developer</p>
+            <p> UI/UX Designer</p>
+            <p> Software Engineer</p>
+            <p> Web Developer Intern</p>
+        </div>
+    </div>
+</div>
+<script src="dashboard.js"></script>
+</body>
+</html>
